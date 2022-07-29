@@ -124,3 +124,11 @@ img {
   min-height: 0px;
   display: flex;
 }
+
+.timer {
+  display: flex;
+  font-size: 48px;
+}
+.field{
+  margin-right: 10px;
+}
