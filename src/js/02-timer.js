@@ -20,7 +20,7 @@ const options = {
   onClose,
 };
 
-const fp = flatpickr(refs.input, options);
+const flatpickr = flatpickr(refs.input, options);
 
 refs.startBtn.setAttribute("disabled", "true");
 let chosenDate = Date.now();
@@ -41,13 +41,13 @@ const onStartBtn = () => {
   refs.input.setAttribute("disabled", "true");
   timerId = setInterval(() => {
     const resultTime = convertMs(chosenDate - Date.now());
-       
+    
     const deltaTime = chosenDate - Date.now();
     if (deltaTime <= 0 ) {
       clearInterval(timerId);
       return;
   }
-     markupChange(resultTime); 
+  markupChange(resultTime); 
   }, 1000);
     
 }
