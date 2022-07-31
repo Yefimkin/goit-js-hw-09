@@ -20,7 +20,7 @@ const options = {
   onClose,
 };
 
-const flatpickr = flatpickr(refs.input, options);
+flatpickr(refs.input, options);
 
 refs.startBtn.setAttribute("disabled", "true");
 let chosenDate = Date.now();
